@@ -11,7 +11,7 @@ const Page = ({ params }: { params: { id: string } }) => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    await fetch("/api/post", {
+    await fetch("/admin/api/post", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -29,7 +29,7 @@ const Page = ({ params }: { params: { id: string } }) => {
         console.log(e);
       });
 
-    router.push("/");
+    router.push("/admin/");
   };
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const Page = ({ params }: { params: { id: string } }) => {
   }, []);
 
   const getData = async () => {
-    const res = await fetch("/api/post/" + id);
+    const res = await fetch("/admin/api/post/" + id);
     const json = await res.json();
 
     if (!json) {

@@ -10,7 +10,7 @@ const Item = ({ post }: Props) => {
   const router = useRouter();
 
   const handleDelete = async (id: number) => {
-    await fetch("/api/post?id=" + id, {
+    await fetch("/admin/api/post?id=" + id, {
       method: "DELETE",
     });
     router.refresh();
@@ -21,7 +21,7 @@ const Item = ({ post }: Props) => {
       <h1>Title: {post.title}</h1>
       <p>Content: {post.content}</p>
       <div className="inline-flex mt-4 gap-2">
-        <button className="text-xs hover:text-zinc-800 font-bold" onClick={() => router.push(`/update/${post.id}`)}>
+        <button className="text-xs hover:text-zinc-800 font-bold" onClick={() => router.push(`/admin/update/${post.id}`)}>
           Update
         </button>
         <button className="text-xs text-red-500 hover:text-red-400 font-bold" onClick={() => handleDelete(post.id)}>

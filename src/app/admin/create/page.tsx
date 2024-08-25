@@ -13,7 +13,7 @@ const Page = () => {
 
     setIsLoading(true);
 
-    await fetch("/api/post", {
+    await fetch("/admin/api/post", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -31,7 +31,7 @@ const Page = () => {
       });
 
     setIsLoading(false);
-    router.push("/");
+    router.push("/admin/");
     router.refresh();
   };
 
