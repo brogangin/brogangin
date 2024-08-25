@@ -1,7 +1,7 @@
 type Match = {
   MatchNumber: Number;
   RoundNumber: Number;
-  DateUtc: String;
+  DateUtc: string;
   Location: String;
   HomeTeam: String;
   AwayTeam: String;

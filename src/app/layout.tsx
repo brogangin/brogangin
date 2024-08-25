@@ -13,7 +13,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-white">{children}</body>
+      <body className="bg-white">
+        <main className="container min-h-screen">{children}</main>
+        <footer className="p-[40px] bg-zinc-100 mt-2">Made by Bima Maulana</footer>
+      </body>
     </html>
   );
 }
