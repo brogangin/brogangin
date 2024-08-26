@@ -1,10 +1,10 @@
-import { GET as getAllPost } from "@/app/admin/api/post/route";
 import Link from "next/link";
 import React from "react";
 import Item from "./item";
+import { GET as getAll } from "./api/post/route";
 
 const getPosts = async () => {
-  const res = await getAllPost();
+  const res = await getAll();
   const json = await res.json();
   return json;
 };
