@@ -1,9 +1,10 @@
+import { GET as getAllPost } from "@/app/admin/api/post/route";
 import Link from "next/link";
 import React from "react";
 import Item from "./item";
 
 const getPosts = async () => {
-  const res = await fetch(process.env.NEXT_PUBLIC_URL + "/admin/api/post", { method: "GET", next: { revalidate: 0 } });
+  const res = await getAllPost();
   const json = await res.json();
   return json;
 };
