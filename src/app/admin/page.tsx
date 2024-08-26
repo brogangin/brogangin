@@ -3,7 +3,7 @@ import React from "react";
 import Item from "./item";
 
 const getPosts = async () => {
-  const res = await fetch(process.env.BASE_URL + "/admin/api/post", { method: "GET", next: { revalidate: 0 } });
+  const res = await fetch(process.env.NEXT_PUBLIC_URL + "/admin/api/post", { method: "GET", next: { revalidate: 0 } });
   const json = await res.json();
   return json;
 };
