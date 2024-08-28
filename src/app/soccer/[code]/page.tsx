@@ -8,14 +8,13 @@ const Page = async ({ params }: { params: { code: string } }) => {
     return league.code == params.code;
   })[0];
   return (
-    <div className="w-full py-20">
-      <div className="flex flex-row mb-16 items-center px-5">
-        <Link href={"/soccer"} className="px-3 py-2 bg-zinc-900 hover:bg-zinc-800 rounded-md text-white text-sm">
-          ◁ Back
-        </Link>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img alt={league?.name.toString()} src={`https:\/\/media.api-sports.io\/football\/leagues\/${league?.id}.png`} className="mx-auto w-[80px] md:w-[100px]" />
-      </div>
+    <div className=" py-20">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img alt={league?.name.toString()} src={`https:\/\/media.api-sports.io\/football\/leagues\/${league?.id}.png`} className=" w-[100px] md:w-[120px]  border-[4px] border-black shadow-[5px_5px_0_0_#000000] rounded-[14px]" />
+      <Link href={"/soccer"} className="px-3 py-2 mt-3 bg-zinc-900 hover:bg-zinc-800 rounded-md text-center text-white text-sm block w-[100px] md:w-[120px]">
+        ◁ Back
+      </Link>
+
       <SectionList code={params.code} />
     </div>
   );
