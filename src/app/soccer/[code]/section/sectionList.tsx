@@ -8,7 +8,7 @@ interface Props {
 }
 
 const getMatches = async (code: string) => {
-  const res = await fetch(`https://fixturedownload.com/feed/json/${code}`);
+  const res = await fetch(`https://fixturedownload.com/feed/json/${code}`, { next: { revalidate: 60 } });
   const json = await res.json();
   return json;
 };
