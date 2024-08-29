@@ -18,6 +18,10 @@ const navLinks = [
     title: "Contact",
     href: "#contact",
   },
+  {
+    title: "Soccer",
+    href: "/soccer",
+  },
 ];
 
 const Navbar = () => {
