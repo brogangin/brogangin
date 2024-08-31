@@ -12,8 +12,10 @@ const config = {
     },
     colors: {
       ...colors,
-      primary: colors.purple,
-      secondary: colors.pink,
+      primary: colors.emerald,
+      secondary: colors.teal,
+      "soccer-primary": colors.emerald,
+      "soccer-secondary": colors.teal,
     },
     container: {
       center: true,
