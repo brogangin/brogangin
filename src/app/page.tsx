@@ -6,7 +6,7 @@ import EmailSection from "./components/emailSection";
 import Footer from "./components/footer";
 import AchievementsSection from "./components/achievementsSection";
 
-export default function Home() {
+const Page = () => {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
@@ -20,4 +20,6 @@ export default function Home() {
       <Footer />
     </main>
   );
-}
+};
+
+export default Page;

@@ -2,20 +2,32 @@ import Link from "next/link";
 import React from "react";
 import SectionList from "./section/sectionList";
 import { Leagues } from "../leagues";
+import SectionHead from "../section/sectionHead";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Soccer",
+};
 
 const Page = async ({ params }: { params: { code: string } }) => {
   const league = Leagues.filter((league) => {
     return league.code == params.code;
   })[0];
-  return (
-    <div className=" py-20">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img alt={league?.name.toString()} src={`https:\/\/media.api-sports.io\/football\/leagues\/${league?.id}.png`} className=" w-[100px] md:w-[120px]  border-[4px] border-black shadow-[5px_5px_0_0_#000000] rounded-[14px]" />
-      <Link href={"/soccer"} className="px-3 py-2 mt-3 bg-zinc-900 hover:bg-zinc-800 rounded-md text-center text-white text-sm block w-[100px] md:w-[120px]">
-        ◁ Back
-      </Link>
 
-      <SectionList code={params.code} />
+  return (
+    <div className="w-full min-h-screen bg-gradient-to-br from-emerald-400 to-teal-500">
+      <SectionHead />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <div className="container mt-12 text-zinc-800">
+        <div className="text-2xl">
+          <Link href={"/soccer"} className="inline hover:underline underline-offset-2">
+            {"Home"}
+          </Link>
+          {"  "}/{"  "}
+          <p className="text-4xl inline">{league?.name.toString()}</p>
+        </div>
+        <SectionList code={params.code} />
+      </div>
     </div>
   );
 };
