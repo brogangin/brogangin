@@ -48,13 +48,13 @@ const EmailSection = () => {
         <p className="text-[#ADB7BE] mb-4 max-w-md"> I&apos;m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!</p>
         <hr className="mb-4 w-1/2" />
         <div className="socials flex flex-row gap-5">
-          <Link href="github.com/brogangin">
+          <Link href="//github.com/brogangin" target="_blank">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
+          <Link href="//linkedin.com" target="_blank">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
-          <Link href="instagram.com/bimaulanah">
+          <Link href="//instagram.com/bimaulanah" target="_blank">
             <Image src={InstagramIcon} alt="Instagram Icon" />
           </Link>
         </div>
