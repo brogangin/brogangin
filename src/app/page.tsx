@@ -7,18 +7,18 @@ import Footer from "./components/footer";
 import AchievementsSection from "./components/achievementsSection";
 
 const Page = () => {
-  return (
-    <main className="flex min-h-screen flex-col bg-[#121212]">
-      <Navbar />
-      <div className="container mx-auto px-12 pb-4">
-        <HeroSection />
-        <AboutSection />
-        <ProjectsSection />
-        <EmailSection />
-      </div>
-      <Footer />
-    </main>
-  );
+    return (
+        <main className="flex min-h-screen flex-col bg-[#121212]">
+            <Navbar />
+            <div className="container mx-auto px-12 pb-4">
+                <HeroSection />
+                <AboutSection />
+                <ProjectsSection />
+                <EmailSection />
+            </div>
+            <Footer />
+        </main>
+    );
 };
 
 export default Page;
